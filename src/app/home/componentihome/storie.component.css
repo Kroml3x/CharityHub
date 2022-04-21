@@ -1,11 +1,9 @@
 /* css*/
 
 .ultimeStorie {
-  height: 100vh;
+  height: 99vh;
   max-width: auto;
-  display: flex;
-  flex-direction: column;
-  
+  margin-top: 10px;
 }
 
 /* The grid container */
@@ -23,11 +21,13 @@
 .box2,
 .box3,
 .box4 {
-  height: 35vh;
-  width: 31vw;
   border-radius: 30px;
+  padding: 30px;
+  max-height: fit-content;
+  width: 30vw;
   background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
@@ -71,13 +71,7 @@
       'box4'
   }
 
-  .box1,
-  .box2,
-  .box3,
-  .box4 {
-    width: 60vw;
-    height: 18vh;
-  }
+
 }
 
 .box-image {
@@ -95,4 +89,16 @@
 
 .box-text {
   font-size: 2.3vw;
+}
+
+@media only screen and (max-width: 576px) {
+
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    min-width: fit-content;
+  }
+
 }
