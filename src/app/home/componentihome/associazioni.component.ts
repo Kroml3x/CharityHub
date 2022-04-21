@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+interface Association{
+  id : string;
+  value : string;
+  reg: string;
+  Title: string;
+  img: string;
+}
 
 @Component({
   selector: 'app-associazioni',
@@ -7,7 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssociazioniComponent implements OnInit {
 
-  constructor() { }
+  associations: Association[]=[];
+  constructor(private httpClient: HttpClient) {
+
+    const url = 'http://localhost:3000/associazioni'
+
+    this.httpClient.get<Association[]>(url).subscribe(data => this.associations=data);
+  }
+
+  
 
   ngOnInit(): void {
   }
