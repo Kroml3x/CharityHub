@@ -32,7 +32,20 @@ import { ListaassociazioniComponent } from './listaassociazioni/listaassociazion
     AssociazioniComponent,
     FrecciagiuComponent,
     ListainiziativeComponent,
-    ListaassociazioniComponent,
+    ListaassociazioniComponent
+/*     HeaderComponent,
+    NavigazioneComponent,
+    TitoloComponent,
+    HomeComponent,
+    InfoComponent,
+    FooterComponent,
+    BannerComponent,
+    IniziativeComponent,
+    StorieComponent,
+    AssociazioniComponent,
+    FrecciagiuComponent,
+    ListainiziativeComponent,
+    ListaassociazioniComponent, */
 
   ],
   imports: [
