@@ -1,3 +1,11 @@
+h5, p {
+  font-size: 2vw;
+}
+
+img {
+  filter: brightness(50%);
+}
+
 /* .carousel-caption {
     top: 0;
     bottom: auto;

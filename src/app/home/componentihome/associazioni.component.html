@@ -11,7 +11,7 @@
 
     <div class="carousel-inner d-flex flex-row">
           <div class="carousel-item active">
-            <img src="../../../assets/compagnia.png" class="d-block imgcarus" alt="Slide 1">
+            <img src="../../../assets/compagnia.png" class="d-block w-100 imgcarus" alt="Slide 1">
             <div class="carousel-caption  d-md-block ">
               <h5>Lista Associazioni Onlus</h5>
               <p>Scorrendo scoprirete tutte le associazioni che aiutano l'Ucraina</p>
@@ -19,7 +19,7 @@
           </div>
         <div class="carousel-item" *ngFor="let association of associations;let i=index;"
           [attr.data-regione]="association.reg">
-          <img src="../../../assets/compagnia.png" class="d-block imgcarus" alt="Slide 2">
+          <img src="../../../assets/compagnia.png" class="d-block w-100 imgcarus" alt="Slide 2">
           <div class="carousel-caption  d-md-block text-justify">
               <h5 class="figure-caption text-white">{{association["Title"]}}</h5>
               <p>{{association["value"]}}</p>
