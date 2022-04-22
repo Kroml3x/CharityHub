@@ -1,79 +1,74 @@
-
 <h1 class="text-center">Principali Associazioni</h1>
-<div class="container-lg my-3"  align="center">
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators" >
-                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li> 
-                <li data-bs-target="#myCarousel"  *ngFor="let a of associations;let i=index;" [attr.data-bs-slide-to]="i+1"></li>
-        </ol>
-        
-        <!-- Wrapper for carousel items -->
+<div class="container-lg my-3" align="center">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" *ngFor="let a of associations;let i=index;" [attr.data-bs-slide-to]="i+1"></li>
+    </ol>
 
-        <div class="carousel-inner" >
-            <div class="carousel-item active" >
-                <img src="../../../assets/3.png " class="d-block w-50 imgcarus" alt="Slide 1">
+    <!-- Wrapper for carousel items -->
 
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../../../assets/3.png " class="d-block w-auto h-70 imgcarus" alt="Slide 1">
-
-                <div class="carousel-caption  d-md-block ">
-                    <img src="../../../assets/3.png" class="img-thumbnail" alt="Slide 1">
-                    <h5>titolo</h5>
-                    <p>prova</p>
-                </div>
+    <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../../assets/3.png " class="d-block w-auto h-25 imgcarus" alt="Slide 1">
+            <div class="carousel-caption  d-md-block ">
+              <img src="../../../assets/3.png" class="img-thumbnail" alt="Slide 1">
+              <h5>titolo</h5>
+              <p>prova</p>
             </div>
-            <div class="carousel-item" *ngFor="let association of associations;let i=index;" [attr.data-regione]="association.reg">
-                <img src="../../../assets/3.png" class="d-block w-50 imgcarus" alt="Slide 2">
-                <div class="carousel-caption  d-md-block ">
-                    <figure class="figure">
-                        <img src="{{association['img']}}" class="figure-img img-fluid rounded w-50" 
-                                alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-                        <figcaption class="figure-caption" >{{association["Title"]}}</figcaption>
-                        <p>{{association["value"]}}</p>
-                    </figure>
-                </div>
-            </div>
+          </div>
+        <div class="carousel-item" *ngFor="let association of associations;let i=index;"
+          [attr.data-regione]="association.reg">
+          <img src="../../../assets/3.png" class="d-block w-auto h-25 imgcarus" alt="Slide 2">
+          <div class="carousel-caption  d-md-block ">
+            <figure class="figure">
+              <img src="{{association['img']}}" class="figure-img img-fluid rounded w-50"
+                alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+              <h5 class="figure-caption text-white">{{association["id"]}}</h5>
+              <p>{{association["value"]}}</p>
+            </figure>
+          </div>
         </div>
 
         <!-- Carousel controls -->
         <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+          <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+          <span class="carousel-control-next-icon"></span>
         </a>
+      </div>
     </div>
-</div>
-<div >
-    <button onclick="myFunction()" >Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
-      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-      <a href="#Abruzzo"> Abruzzo </a>
-      <a href="#Basilicata"> Basilicata </a>
-      <a href="#Calabria"> Calabria </a>
+    <div>
+      <button onclick="myFunction()">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <a href="#Abruzzo"> Abruzzo </a>
+        <a href="#Basilicata"> Basilicata </a>
+        <a href="#Calabria"> Calabria </a>
+      </div>
     </div>
-</div>
 
-<script type="text/javascript">
-    function myFunction() {
+    <script type="text/javascript">
+      function myFunction() {
         alert("ciao");
-    }
+      }
 
-    function filterFunction() {
+      function filterFunction() {
         var input, filter, ul, li, a, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         div = document.getElementById("myDropdown");
         a = div.getElementsByTagName("fltro a");
         for (i = 0; i < a.length; i++) {
-            txtValue = a[i].textContent || a[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
             a[i].style.display = "";
-            } else {
+          } else {
             a[i].style.display = "none";
-            }
+          }
         }
-    }
-</script>
+      }
+
+    </script>
