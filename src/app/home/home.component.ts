@@ -9,13 +9,9 @@ import {Association} from '../class/association'
 })
 export class HomeComponent implements OnInit {
 
-  associations: Association[]=[];
 
   constructor(private httpClient: HttpClient) { 
 
-    const url = require('../../server/db.json');
-
-    this.httpClient.get<Association[]>(url).subscribe(data => this.associations=data);
   }
 
   ngOnInit(): void {
