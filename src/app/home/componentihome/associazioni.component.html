@@ -1,4 +1,6 @@
 <h1 class="text-center">Principali Associazioni</h1>
+
+{{associations | json}}
 <div class="container-lg my-3" align="center">
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Carousel indicators -->
@@ -25,7 +27,7 @@
             <figure class="figure">
               <img src="{{association['img']}}" class="figure-img img-fluid rounded w-50"
                 alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-              <h5 class="figure-caption text-white">{{association["id"]}}</h5>
+              <h5 class="figure-caption text-white">{{association["Title"]}}</h5>
               <p>{{association["value"]}}</p>
             </figure>
           </div>

@@ -11,5 +11,5 @@ export class ListainiziativeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

@@ -11,5 +11,5 @@ export class ListaassociazioniComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
