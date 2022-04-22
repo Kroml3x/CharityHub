@@ -1,6 +1,6 @@
 <h1 class="text-center">Principali Associazioni</h1>
-<div class="container-lg my-3" align="center">
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="container-lg my-3" align="center" >
+  <div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
       <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
@@ -9,25 +9,20 @@
 
     <!-- Wrapper for carousel items -->
 
-    <div class="carousel-inner">
+    <div class="carousel-inner d-flex flex-row">
           <div class="carousel-item active">
-            <img src="../../../assets/3.png " class="d-block w-auto h-25 imgcarus" alt="Slide 1">
+            <img src="../../../assets/compagnia.png" class="d-block imgcarus" alt="Slide 1">
             <div class="carousel-caption  d-md-block ">
-              <img src="../../../assets/3.png" class="img-thumbnail" alt="Slide 1">
-              <h5>titolo</h5>
-              <p>prova</p>
+              <h5>Lista Associazioni Onlus</h5>
+              <p>Scorrendo scoprirete tutte le associazioni che aiutano l'Ucraina</p>
             </div>
           </div>
         <div class="carousel-item" *ngFor="let association of associations;let i=index;"
           [attr.data-regione]="association.reg">
-          <img src="../../../assets/3.png" class="d-block w-auto h-25 imgcarus" alt="Slide 2">
-          <div class="carousel-caption  d-md-block ">
-            <figure class="figure">
-              <img src="{{association['img']}}" class="figure-img img-fluid rounded w-50"
-                alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+          <img src="../../../assets/compagnia.png" class="d-block imgcarus" alt="Slide 2">
+          <div class="carousel-caption  d-md-block text-justify">
               <h5 class="figure-caption text-white">{{association["Title"]}}</h5>
               <p>{{association["value"]}}</p>
-            </figure>
           </div>
         </div>
 
