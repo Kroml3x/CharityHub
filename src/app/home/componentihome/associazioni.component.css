@@ -1,65 +1,38 @@
 h5, p {
-  font-size: 2vw;
+  font-size: 1vw;
+  font-weight: 600;
 }
 
 img {
   filter: brightness(50%);
+  max-height: 100%;
+  max-width: 70%;
+}
+.carousel-inner{
+  min-width:100%;
+  max-height: 60vh !important;
 }
 
-/* .carousel-caption {
-    top: 0;
-    bottom: auto;
+.controls a.carousel-control-prev {
+  left: 10%;
 }
-.imgcarus{
-    border-radius:40px;
+
+.controls a.carousel-control-next {
+  right: 10%;
 }
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+
+.carousel-caption {
+  width: 50%;
+}
+
+@media (max-width: 576px) {
+
+  h5, p {
+    font-size:70%;
   }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+
+  .carousel-caption {
+    width: 70%;
   }
-  
-  #myInput {
-    box-sizing: border-box;
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myInput:focus {outline: 3px solid #ddd;}
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    overflow: auto;
-    border: 1px solid #ddd;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;} */
+
+}
